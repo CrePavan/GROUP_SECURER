@@ -364,7 +364,7 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Commands List 📖", callback_data="codexun_"),
+                    InlineKeyboardButton(text="Commands List 📖", callback_data="emiko_admin"),
                  ],
                  [
                     InlineKeyboardButton(text="Privacy 📋", callback_data="emiko_support"),
@@ -374,7 +374,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="Add to Your Group", url="https://github.com/kennedy-ex/EmikoRobot"),
                  ],
                  [
-                    InlineKeyboardButton(text="🔐 Lock Section Again 🔐", callback_data="emiko_back"),
+                    InlineKeyboardButton(text="Lock Again 🔐", callback_data="emiko_back"),
                  ]
                 ]
             ),
@@ -398,18 +398,24 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_admin":
         query.message.edit_text(
-            text=f"*๏ Let's make your group bit effective now*"
-            "\nCongragulations, EmikoRobot now ready to manage your group."
-            "\n\n*Admin Tools*"
-            "\nBasic Admin tools help you to protect and powerup your group."
-            "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
-            "\n\n*Greetings*"
-            "\nLets set a welcome message to welcome new users coming to your group."
-            "\nsend `/setwelcome [message]` to set a welcome message!",
+            text="*Commands Section 📖*"
+            "\n\nHere you will be get all explanation about to commands are available in the bot to manage your groups easily and safely."
+            "\n\nFrom the properties of commands or modules in the bot, the command section decided into three section or part. One is Basic second is Advanced and third last is Expert"
+            "\n\n*Use the following buttons for more*",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
+                [
+                 [
+                    InlineKeyboardButton(text="Basic", callback_data="emiko_basic"),
+                    InlineKeyboardButton(text="Advanced", callback_data="codexun_advanced"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Experts", callback_data="codexun_expert"),
+                 ],[
+                    InlineKeyboardButton(text="⬅️ Back Home", callback_data="codexun_expert"),
+                 ],
+                ]
             ),
         )
 
@@ -417,6 +423,17 @@ def emiko_about_callback(update, context):
     elif query.data == "emiko_notes":
         query.message.edit_text(
             text=f"<b>๏ Setting up notes</b>"
+            f"\nYou can save message/media/audio or anything as notes"
+            f"\nto get a note simply use # at the beginning of a word"
+            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
+            ),
+        )
+    elif query.data == "emiko_basic":
+        query.message.edit_text(
+            text=f"<b>๏ basic setting up notes</b>"
             f"\nYou can save message/media/audio or anything as notes"
             f"\nto get a note simply use # at the beginning of a word"
             f"\n\nYou can also set buttons for notes and filters (refer help menu)",
