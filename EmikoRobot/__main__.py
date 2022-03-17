@@ -381,20 +381,6 @@ def emiko_about_callback(update, context):
             ),
         )
 
-elif query.data == "codexun":
-        query.message.edit_text(
-            text=f"*Welcome again 💞*
-            I'm Group Securer Bot, the powerful group management bot which helps you to manage your super groups easily and safely. Me has a many types of unbelievable features.
-
-I also can protect your super group from scammers and spammers, for using me just add me tou your group and make a admin!
-
-*Get more information about below.*",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
-            ),
-        )
 
     elif query.data == "emiko_back":
         first_name = update.effective_user.first_name
@@ -421,6 +407,21 @@ I also can protect your super group from scammers and spammers, for using me jus
             "\n\n*Greetings*"
             "\nLets set a welcome message to welcome new users coming to your group."
             "\nsend `/setwelcome [message]` to set a welcome message!",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
+            ),
+        )
+
+elif query.data == "codexun":
+        query.message.edit_text(
+            text=f"*Welcome again 💞*
+            I'm Group Securer Bot, the powerful group management bot which helps you to manage your super groups easily and safely. Me has a many types of unbelievable features.
+
+I also can protect your super group from scammers and spammers, for using me just add me tou your group and make a admin!
+
+*Get more information about below.*",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
