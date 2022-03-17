@@ -399,8 +399,8 @@ def emiko_about_callback(update, context):
     elif query.data == "emiko_admin":
         query.message.edit_text(
             text="*Commands Section 📖*"
-            "\n\nHere you will be get all explanation about to commands are available in the bot to manage your groups easily and safely."
-            "\n\nFrom the properties of commands or modules in the bot, the command section decided into three section or part. One is Basic second is Advanced and third last is Expert"
+            "\n\nHere you will be get all explanation about to commands are available in the group securer bot to manage your groups safely and easily."
+            "\n\nFrom the properties of commands or modules in the bot, the command section decided into three section or part. One is Basic second is Advanced and third last is Expert."
             "\n\n*Use the following buttons for more*",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -433,13 +433,16 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_basic":
         query.message.edit_text(
-            text=f"<b>๏ basic setting up notes</b>"
-            f"\nYou can save message/media/audio or anything as notes"
-            f"\nto get a note simply use # at the beginning of a word"
+            text=f"<b>๏ Basic Commands List 📖</b>"
+            f"\n\n👮🏻 Available to Admins & Moderators 👩🏻‍💻"
+            f"\n\n👮🏻 /connect connect your group chat with group securer bot.\n\n🕵🏻 /settings lets you manage all the Bot settings in a group.\n\n👮🏻  /ban lets you ban a user from the group without giving him the possibility to join again using the link of the group.\n\n👮🏻  /mute puts a user in read-only mode. He can read but he can't send any messages.\n\n👮🏻  /kick bans a user from the group, giving him the possibility to join again with the link of the group.\n\n👮🏻  /unban lets you remove a user from group's blacklist, giving them the possibility to join again with the link of the group.\n\n👮🏻  /info gives information about a user.\n\n*Get the information about to welcome massage for your group and set rules for group below.*"
             f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
+                [[
+                    InlineKeyboardButton(text="Welcome 📲", callback_data="emiko_basic"),
+                    InlineKeyboardButton(text="Rules 📋", callback_data="codexun_advanced"),
+                 ],[InlineKeyboardButton(text="⬅️ Go Back", callback_data="emiko_")]]
             ),
         )
     elif query.data == "emiko_support":
