@@ -82,12 +82,12 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Welcome [{}](t.me/codexun) 👋*
-Myself Group Securer Bot, the powerful group management bot to helps you to manage your groups easily and safely.
+*Welcome {} 🙋🏻‍♂️*
+Myself is Group Securer Bot, the powerful group management bot to helps you to manage your groups easily and safely.
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-✪ Time : `{}`
-✪ User : `{} users`
-✪ Chat : `{} chats`
+✪ Time :  `{}`
+✪ User :  `{}`
+✪ Chat :  `{}`
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 I can helps you to protect your group from scammers and spammers. Lets get started by clicking below !
 """
@@ -350,7 +350,7 @@ def emiko_about_callback(update, context):
     query = update.callback_query
     if query.data == "emiko_":
         query.message.edit_text(
-            text="๏ I'm *Emiko*, a powerful group management bot built to help you manage your group easily."
+            text="๏ I'm *Group Securer*, a powerful group management bot built to help you manage your group easily."
             "\n• I can restrict users."
             "\n• I can greet users with customizable welcome messages and even set a group's rules."
             "\n• I have an advanced anti-flood system."
@@ -364,18 +364,18 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins", callback_data="emiko_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="emiko_notes"),
+                    InlineKeyboardButton(text="Commands 📖", callback_data="emiko_admin"),
+                    InlineKeyboardButton(text="About 👩🏻‍💻", callback_data="emiko_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="emiko_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="emiko_credit"),
+                    InlineKeyboardButton(text="Privacy 📝", callback_data="emiko_support"),
+                    InlineKeyboardButton(text="Basic 🏓", callback_data="emiko_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Source Code", url="https://github.com/kennedy-ex/EmikoRobot"),
+                    InlineKeyboardButton(text="Add to your Group", url="https://github.com/kennedy-ex/EmikoRobot"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="emiko_back"),
+                    InlineKeyboardButton(text="Lock Again 🔐", callback_data="emiko_back"),
                  ]
                 ]
             ),
