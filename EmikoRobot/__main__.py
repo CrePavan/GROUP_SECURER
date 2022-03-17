@@ -82,14 +82,14 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hey {} 🙋🏻‍♂️*
+Hey *{} 🙋🏻‍♂️*
 I'm Powerfull Management Bot For Helping You to Manage Your Group.
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-*✪ Time :*  `{}`
-*✪ User :*  `{}` *users*
-*✪ Chat :*  `{}` *chats*
+✪ *Time :*  `{}`
+✪ *User :*  `{}` *users*
+✪ *Chat :*  `{}` *chats*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-*✪ Lets get started below ✪*
+✪ *Lets get started task below* ✪
 """
 
 buttons = [
@@ -364,7 +364,7 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Commands List 📖", callback_data="emiko_admin"),
+                    InlineKeyboardButton(text="Commands List 📖", callback_data="codexun_"),
                  ],
                  [
                     InlineKeyboardButton(text="Privacy 📋", callback_data="emiko_support"),
@@ -374,7 +374,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="Add to Your Group", url="https://github.com/kennedy-ex/EmikoRobot"),
                  ],
                  [
-                    InlineKeyboardButton(text="Lock Menu Again 🔐", callback_data="emiko_back"),
+                    InlineKeyboardButton(text="🔐 Lock Section Again 🔐", callback_data="emiko_back"),
                  ]
                 ]
             ),
@@ -517,6 +517,80 @@ def Source_about_callback(update, context):
                 timeout=60,
                 disable_web_page_preview=False,
         )
+
+
+def Source_about_callback(update, context):
+    query = update.callback_query
+    if query.data == "codexun_":
+        query.message.edit_text(
+            text="*Commands Section 📖*"
+            "\n\nHere you will be get all explanation about to commands are available in the bot to manage your groups easily and safely."
+            "\n\nFrom the properties of commands or modules in the bot, the command section decided into three section or part. One is Basic second is Advanced and third last is Expert"
+            "\n\n*Use the following buttons for more*",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                    InlineKeyboardButton(text="Basic", callback_data="codexun_basic"),
+                    InlineKeyboardButton(text="Advanced", callback_data="codexun_advanced"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Experts", callback_data="codexun_expert"),
+                 ],[
+                    InlineKeyboardButton(text="⬅️ Back Home", callback_data="codexun_expert"),
+                 ],
+                ]
+            ),
+        )
+    elif query.data == "codexun_basic":
+        query.message.edit_text(
+            text=f"<b>๏ Setting up notes</b>"
+            f"\nYou can save message/media/audio or anything as notes"
+            f"\nto get a note simply use # at the beginning of a word"
+            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Go Back", callback_data="codexun_")]]
+            ),
+        )
+    elif query.data == "codexun_advanced":
+        query.message.edit_text(
+            text=f"<b>๏ Setting up notes</b>"
+            f"\nYou can save message/media/audio or anything as notes"
+            f"\nto get a note simply use # at the beginning of a word"
+            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Go Back", callback_data="codexun_")]]
+            ),
+        )
+    elif query.data == "codexun_expert":
+        query.message.edit_text(
+            text=f"<b>๏ Setting up notes</b>"
+            f"\nYou can save message/media/audio or anything as notes"
+            f"\nto get a note simply use # at the beginning of a word"
+            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Go Back", callback_data="codexun_")]]
+            ),
+        )
+    elif query.data == "codexun_back":
+        first_name = update.effective_user.first_name
+        query.message.edit_text(
+                PM_START_TEXT.format(
+                    escape_markdown(first_name),
+                    escape_markdown(uptime),
+                    sql.num_users(),
+                    sql.num_chats()),
+                reply_markup=InlineKeyboardMarkup(buttons),
+                parse_mode=ParseMode.MARKDOWN,
+                timeout=60,
+                disable_web_page_preview=False,
+        )
+
+
 
 def get_help(update: Update, context: CallbackContext):
     chat = update.effective_chat  # type: Optional[Chat]
