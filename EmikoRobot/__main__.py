@@ -82,14 +82,14 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Welcome {} 🙋🏻‍♂️*
-Myself is Group Securer Bot, the powerful group management bot to helps you to manage your groups easily and safely.
+*Hey {} 🙋🏻‍♂️*
+I'm Powerfull Management Bot For Helping You to Manage Your Group.
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-✪ Time :  `{}`
-✪ User :  `{}`
-✪ Chat :  `{}`
+*✪ Time :*  `{}`
+*✪ User :*  `{}` *users*
+*✪ Chat :*  `{}` *chats*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-I can helps you to protect your group from scammers and spammers. Lets get started by clicking below !
+*✪ Lets get started below ✪*
 """
 
 buttons = [
@@ -364,18 +364,17 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Commands 📖", callback_data="emiko_admin"),
-                    InlineKeyboardButton(text="About 👩🏻‍💻", callback_data="emiko_notes"),
+                    InlineKeyboardButton(text="Commands List 📖", callback_data="emiko_admin"),
                  ],
                  [
-                    InlineKeyboardButton(text="Privacy 📝", callback_data="emiko_support"),
-                    InlineKeyboardButton(text="Basic 🏓", callback_data="emiko_credit"),
+                    InlineKeyboardButton(text="Privacy 📋", callback_data="emiko_support"),
+                    InlineKeyboardButton(text="About 👩🏻‍💻", callback_data="emiko_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Add to your Group", url="https://github.com/kennedy-ex/EmikoRobot"),
+                    InlineKeyboardButton(text="Add to Your Group", url="https://github.com/kennedy-ex/EmikoRobot"),
                  ],
                  [
-                    InlineKeyboardButton(text="Lock Again 🔐", callback_data="emiko_back"),
+                    InlineKeyboardButton(text="Lock Menu Again 🔐", callback_data="emiko_back"),
                  ]
                 ]
             ),
