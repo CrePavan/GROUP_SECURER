@@ -1,4 +1,5 @@
 from typing import Dict, List
+from math import ceil
 
 from EmikoRobot import NO_LOAD
 from telegram import MAX_MESSAGE_LENGTH, Bot, InlineKeyboardButton, ParseMode
