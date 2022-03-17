@@ -82,13 +82,14 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hello {} !*
-✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/11b5922a33de9968cedfe.jpg)
-────────────────────────
-× *Uptime:* `{}`
-× `{}` *users, across* `{}` *chats.*
-────────────────────────
-✪ Hit /help to see my available commands.
+*Welcome {} 👋*
+Myself is Group Securer Bot, the powerful group management bot to helps you to manage your groups easily and safely and to protect your group from spammers!
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+✪ Time : {}
+✪ User : {}
+✪ Chat : {} 
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+Lets get started by clicking below.
 """
 
 buttons = [
@@ -96,7 +97,6 @@ buttons = [
         InlineKeyboardButton(text="Lets Get to Start", callback_data="emiko_back"),
     ],
 ]
-
 
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
