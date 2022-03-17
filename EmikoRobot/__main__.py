@@ -94,7 +94,7 @@ I can helps you to protect your group from scammers and spammers. Lets get start
 
 buttons = [
     [
-        InlineKeyboardButton(text="Lets Get to Start", callback_data="codexun"),
+        InlineKeyboardButton(text="Lets Get to Start", callback_data="emiko_"),
     ],
 ]
 
@@ -407,19 +407,6 @@ def emiko_about_callback(update, context):
             "\n\n*Greetings*"
             "\nLets set a welcome message to welcome new users coming to your group."
             "\nsend `/setwelcome [message]` to set a welcome message!",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
-            ),
-        )
-
-elif query.data == "codexun":
-        query.message.edit_text(
-            text=f"*Welcome again 💞*"
-            "\n\nI'm Group Securer Bot, the powerful group management bot which helps you to manage your super groups easily and safely. Me has a many types of unbelievable features."
-            "\n\nI also can protect your super group from scammers and spammers, for using me just add me tou your group and make a admin!"
-            "\n\n*Get more information about below !*",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
