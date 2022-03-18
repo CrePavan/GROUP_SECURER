@@ -368,7 +368,7 @@ def emiko_about_callback(update, context):
                  ],
                  [
                     InlineKeyboardButton(text="Privacy 📋", callback_data="source_"),
-                    InlineKeyboardButton(text="About 👩🏻‍💻", callback_data="emiko_about"),
+                    InlineKeyboardButton(text="About 👩🏻‍💻", callback_data="emiko_fuck"),
                  ],
                  [
                     InlineKeyboardButton(text="Add to Your Group", url="https://github.com/kennedy-ex/EmikoRobot"),
@@ -465,7 +465,7 @@ def emiko_about_callback(update, context):
         )
 
 
-    elif query.data == "emiko_about":
+    elif query.data == "emiko_fuck":
         query.message.edit_text(
             text=f"*About Group Securer 👨🏻‍💻*\n"
             "\n\nGroup Securer is the bot built for to manage your super groups safely and easily and for protect your group from scammers and spammers."
