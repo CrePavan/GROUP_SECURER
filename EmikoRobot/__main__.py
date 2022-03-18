@@ -411,7 +411,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="Advanced", callback_data="codexun_advanced"),
                  ],
                  [
-                    InlineKeyboardButton(text="Experts", callback_data="codexun_expert"),
+                    InlineKeyboardButton(text="📥 Expand Menu 📥", callback_data="help_back"),
                  ],[
                     InlineKeyboardButton(text="⬅️ Back Home", callback_data="codexun_expert"),
                  ],
@@ -434,15 +434,15 @@ def emiko_about_callback(update, context):
     elif query.data == "emiko_basic":
         query.message.edit_text(
             text=f"<b>๏ Basic Commands List 📖</b>"
-            f"\n\n👮🏻 Available to Admins & Moderators 👩🏻‍💻"
+            f"\n\n*Available to Admins & Moderators*"
             f"\n\n👮🏻 /connect connect your group chat with group securer bot.\n\n🕵🏻 /settings lets you manage all the Bot settings in a group.\n\n👮🏻  /ban lets you ban a user from the group without giving him the possibility to join again using the link of the group.\n\n👮🏻  /mute puts a user in read-only mode. He can read but he can't send any messages.\n\n👮🏻  /kick bans a user from the group, giving him the possibility to join again with the link of the group.\n\n👮🏻  /unban lets you remove a user from group's blacklist, giving them the possibility to join again with the link of the group.\n\n👮🏻  /info gives information about a user.\n\n*Get the information about to welcome massage for your group and set rules for group below.*"
             f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[
-                    InlineKeyboardButton(text="Welcome 📲", callback_data="emiko_basic"),
-                    InlineKeyboardButton(text="Rules 📋", callback_data="codexun_advanced"),
-                 ],[InlineKeyboardButton(text="⬅️ Go Back", callback_data="emiko_")]]
+                    InlineKeyboardButton(text="Set Welcome", callback_data="emiko_basic")],
+                 [  InlineKeyboardButton(text="Ser Rules", callback_data="codexun_advanced")
+                 ],[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_")]]
             ),
         )
     elif query.data == "emiko_support":
@@ -467,33 +467,21 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_credit":
         query.message.edit_text(
-            text=f"๏ Credis for Emiko\n"
-            "\nHere Developers Making And Give Inspiration For Made The EmikoRobot",
+            text=f"*About Group Securer 👨🏻‍💻*\n"
+            "\n\nGroup Securer is the bot built for to manage your super groups safely and easily and for protect your group from scammers and spammers."
+            "\n\nThis bot is developed by team codexun. Some modules in this bot is owned by different authors so all credit goes to them. If you have any type of querie then kindly contact us at our support group.\n\n*Here is the support and updates*",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="sena-ex", url="https://github.com/kennedy-ex"),
-                    InlineKeyboardButton(text="TheHamkerCat", url="https://github.com/TheHamkerCat"),
+                    InlineKeyboardButton(text="Support", url="https://t.me/TeamCodexun"),
+                    InlineKeyboardButton(text="Updates", url="https://t.me/Codexun"),
                  ],
                  [
-                    InlineKeyboardButton(text="Feri", url="https://github.com/FeriEXP"),
-                    InlineKeyboardButton(text="riz-ex", url="https://github.com/riz-ex"),
+                    InlineKeyboardButton(text="Owned Admin 👨🏻‍💻", user_id="2090451552"),
                  ],
                  [
-                    InlineKeyboardButton(text="Anime Kaizoku", url="https://github.com/animekaizoku"),
-                    InlineKeyboardButton(text="TheGhost Hunter", url="https://github.com/HuntingBots"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Inuka Asith", url="https://github.com/inukaasith"),
-                    InlineKeyboardButton(text="Noob-Kittu", url="https://github.com/noob-kittu"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Queen Arzoo", url="https://github.com/QueenArzoo"),
-                    InlineKeyboardButton(text="Paul Larsen", url="https://github.com/PaulSonOfLars"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
+                    InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_"),
                  ]
                 ]
             ),
@@ -503,23 +491,21 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text="๏›› This advance command for Musicplayer."
-            "\n\n๏ Command for admins only."
-            "\n • `/reload` - For refreshing the adminlist."
-            "\n • `/pause` - To pause the playback."
-            "\n • `/resume` - To resuming the playback You've paused."
-            "\n • `/skip` - To skipping the player."
-            "\n • `/end` - For end the playback."
-            "\n • `/musicplayer <on/off>` - Toggle for turn ON or turn OFF the musicplayer."
-            "\n\n๏ Command for all members."
-            "\n • `/play` <query /reply audio> - Playing music via YouTube."
-            "\n • `/playlist` - To playing a playlist of groups or your personal playlist",
+            text="*Privacy and Terms 📋*"
+            "\n\n✪ We always respect your privacy, we never log into bot's api and spying on you We use a encripted database Bot will automatically stops if someone logged in with api."
+            "\n\n✪ Some modules in this bot is owned by different authors so all credits goes to them."
+            "\n\n✪ We are not a responsible for any type of hazardous issue happened because of bot, because if man can do mistake so then it is a software it can also in some conditions."
+            "\n\n✪ The credit of this bot is going to team codexun so please always respect it."
+            "\n\n✪ If you have any type of problem or question about to group securer then kindly konws us at our support chat group."
+            "\n\n✪ All api's we used owned by originnal authors some api's we use free version please don't overuse AI Chat."
+            "\n\n✪ Stay connected with us always by joining our official update channel which is specially created for you all u guys."
+            "\n\n__Terms & Conditions will be changed with condition and time so please note it.__",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="emiko_")
+                    InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_")
                  ]
                 ]
             ),
@@ -538,77 +524,6 @@ def Source_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
-
-def Source_about_callback(update, context):
-    query = update.callback_query
-    if query.data == "codexun_":
-        query.message.edit_text(
-            text="*Commands Section 📖*"
-            "\n\nHere you will be get all explanation about to commands are available in the bot to manage your groups easily and safely."
-            "\n\nFrom the properties of commands or modules in the bot, the command section decided into three section or part. One is Basic second is Advanced and third last is Expert"
-            "\n\n*Use the following buttons for more*",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="Basic", callback_data="codexun_basic"),
-                    InlineKeyboardButton(text="Advanced", callback_data="codexun_advanced"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Experts", callback_data="codexun_expert"),
-                 ],[
-                    InlineKeyboardButton(text="⬅️ Back Home", callback_data="codexun_expert"),
-                 ],
-                ]
-            ),
-        )
-    elif query.data == "codexun_basic":
-        query.message.edit_text(
-            text=f"<b>๏ Setting up notes</b>"
-            f"\nYou can save message/media/audio or anything as notes"
-            f"\nto get a note simply use # at the beginning of a word"
-            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
-            parse_mode=ParseMode.HTML,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="codexun_")]]
-            ),
-        )
-    elif query.data == "codexun_advanced":
-        query.message.edit_text(
-            text=f"<b>๏ Setting up notes</b>"
-            f"\nYou can save message/media/audio or anything as notes"
-            f"\nto get a note simply use # at the beginning of a word"
-            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
-            parse_mode=ParseMode.HTML,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="codexun_")]]
-            ),
-        )
-    elif query.data == "codexun_expert":
-        query.message.edit_text(
-            text=f"<b>๏ Setting up notes</b>"
-            f"\nYou can save message/media/audio or anything as notes"
-            f"\nto get a note simply use # at the beginning of a word"
-            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
-            parse_mode=ParseMode.HTML,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="codexun_")]]
-            ),
-        )
-    elif query.data == "codexun_back":
-        first_name = update.effective_user.first_name
-        query.message.edit_text(
-                PM_START_TEXT.format(
-                    escape_markdown(first_name),
-                    escape_markdown(uptime),
-                    sql.num_users(),
-                    sql.num_chats()),
-                reply_markup=InlineKeyboardMarkup(buttons),
-                parse_mode=ParseMode.MARKDOWN,
-                timeout=60,
-                disable_web_page_preview=False,
-        )
 
 
 
