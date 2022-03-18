@@ -364,11 +364,8 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Commands Menu ⚙️", callback_data="emiko_admin"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Privacy 📋", callback_data="source_"),
-                    InlineKeyboardButton(text="About 👩🏻‍💻", callback_data="emiko_fuck"),
+                    InlineKeyboardButton(text="Commands ⚙️", callback_data="emiko_admin"),
+                    InlineKeyboardButton(text="About 👨🏻‍💻", callback_data="emiko_fuck"),
                  ],
                  [
                     InlineKeyboardButton(text="Add to Your Group", url="https://github.com/kennedy-ex/EmikoRobot"),
@@ -407,11 +404,11 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Basic", callback_data="emiko_basic"),
-                    InlineKeyboardButton(text="Advanced", callback_data="codexun_advanced"),
+                    InlineKeyboardButton(text="💁🏻 Basic", callback_data="emiko_basic"),
+                    InlineKeyboardButton(text="Advanced 👮🏻‍♂️", callback_data="codexun_advanced"),
                  ],
                  [
-                    InlineKeyboardButton(text="Full Menu", callback_data="help_back"),
+                    InlineKeyboardButton(text="Expert Menu 🕵🏻", callback_data="help_back"),
                  ],[
                     InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_"),
                  ],
@@ -456,11 +453,8 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="https://t.me/TeamCodexun"),
-                    InlineKeyboardButton(text="Updates", url="https://t.me/Codexun"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Owned Admin 👩🏻‍💻", url="https://t.me/pavan_magar"),
+                    InlineKeyboardButton(text="Privacy 📋", callback_data="source_"),
+                    InlineKeyboardButton(text="Support", callback_data="source_support"),
                  ],
                  [
                     InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_"),
