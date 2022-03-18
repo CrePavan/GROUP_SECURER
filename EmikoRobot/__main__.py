@@ -367,14 +367,14 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="Commands List 📖", callback_data="emiko_admin"),
                  ],
                  [
-                    InlineKeyboardButton(text="Privacy 📋", callback_data="emiko_support"),
-                    InlineKeyboardButton(text="About 👩🏻‍💻", callback_data="emiko_credit"),
+                    InlineKeyboardButton(text="Privacy 📋", callback_data="source_"),
+                    InlineKeyboardButton(text="About 👩🏻‍💻", callback_data="emiko_about"),
                  ],
                  [
                     InlineKeyboardButton(text="Add to Your Group", url="https://github.com/kennedy-ex/EmikoRobot"),
                  ],
                  [
-                    InlineKeyboardButton(text="Lock Again 🔐", callback_data="emiko_back"),
+                    InlineKeyboardButton(text="Back to Home 🏘️", callback_data="emiko_back"),
                  ]
                 ]
             ),
@@ -411,9 +411,9 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="Advanced", callback_data="codexun_advanced"),
                  ],
                  [
-                    InlineKeyboardButton(text="📥 Expand Menu 📥", callback_data="help_back"),
+                    InlineKeyboardButton(text="Full Menu", callback_data="help_back"),
                  ],[
-                    InlineKeyboardButton(text="⬅️ Back Home", callback_data="codexun_expert"),
+                    InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_"),
                  ],
                 ]
             ),
@@ -445,7 +445,7 @@ def emiko_about_callback(update, context):
                  ],[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_")]]
             ),
         )
-    elif query.data == "emiko_support":
+    elif query.data == "emiko_lel":
         query.message.edit_text(
             text="*๏ Emiko support chats*"
             "\nJoin My Support Group/Channel for see or report a problem on Emiko.",
@@ -465,7 +465,7 @@ def emiko_about_callback(update, context):
         )
 
 
-    elif query.data == "emiko_credit":
+    elif query.data == "emiko_about":
         query.message.edit_text(
             text=f"*About Group Securer 👨🏻‍💻*\n"
             "\n\nGroup Securer is the bot built for to manage your super groups safely and easily and for protect your group from scammers and spammers."
