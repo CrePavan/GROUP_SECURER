@@ -364,11 +364,11 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Commands List 📖", callback_data="emiko_admin"),
+                    InlineKeyboardButton(text="Commands Menu ⚙️", callback_data="emiko_admin"),
                  ],
                  [
                     InlineKeyboardButton(text="Privacy 📋", callback_data="source_"),
-                    InlineKeyboardButton(text="About 👩🏻‍💻", callback_data="emiko_about"),
+                    InlineKeyboardButton(text="About 👩🏻‍💻", callback_data="emiko_fuck"),
                  ],
                  [
                     InlineKeyboardButton(text="Add to Your Group", url="https://github.com/kennedy-ex/EmikoRobot"),
@@ -398,7 +398,7 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_admin":
         query.message.edit_text(
-            text="*Commands Section 📖*"
+            text="*Commands Menu Section 📖*"
             "\n\nHere you will be get all explanation about to commands are available in the group securer bot to manage your groups safely and easily."
             "\n\nFrom the properties of commands or modules in the bot, the command section decided into three section or part. One is Basic second is Advanced and third last is Expert."
             "\n\n*Use the following buttons for more*",
@@ -445,27 +445,9 @@ def emiko_about_callback(update, context):
                  ],[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_")]]
             ),
         )
-    elif query.data == "emiko_lel":
-        query.message.edit_text(
-            text="*๏ Emiko support chats*"
-            "\nJoin My Support Group/Channel for see or report a problem on Emiko.",
-            parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="Support", url="t.me/emikosupport"),
-                    InlineKeyboardButton(text="Updates", url="https://t.me/KennedyProject"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
-                 
-                 ]
-                ]
-            ),
-        )
+    
 
-
-    elif query.data == "emiko_basic":
+    elif query.data == "emiko_fuck":
         query.message.edit_text(
             text=f"*About Group Securer 👨🏻‍💻*\n"
             "\n\nGroup Securer is the bot built for to manage your super groups safely and easily and for protect your group from scammers and spammers."
