@@ -370,7 +370,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="Lock 🔒", callback_data="emiko_back"),
                  ],
                  [
-                    InlineKeyboardButton(text="Add to Your Group", url="https://github.com/kennedy-ex/EmikoRobot"),
+                    InlineKeyboardButton(text="Add to Your Group", url="t.me/GroupsecurerBot?startgroup=new"),
                  ]
                 ]
             ),
