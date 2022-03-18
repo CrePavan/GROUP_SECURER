@@ -490,7 +490,11 @@ def Source_about_callback(update, context):
             f"\n\n👮🏻 /filters  see all available filters in the given chat group\n\n👮🏻‍♂️  /filter set the new filter by replying some msg or by typing text\n\n👮🏻‍♂️  /stop filter name and stop the available filter in the given chat group\n\n👮🏻‍♂️  /notes see all available notes in the given chat group.\n\n👮🏻‍♂️  /save and name of note and create new note in your group.\n\n👮🏻‍♂️  /remove and note name and remove your available notes from group.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Tools 📲", callback_data="emiko_admin"),(InlineKeyboardButton(text="Fun 🎮", callback_data="emiko_admin")],[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
+                [[
+                    InlineKeyboardButton(text="Tools 📲", callback_data="emiko_basic"),
+                    InlineKeyboardButton(text="Fun 🎮", callback_data="source_basic"),
+                 ],
+                 [InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
             ),
         )
     elif query.data == "source_notes":
