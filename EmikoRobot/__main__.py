@@ -367,7 +367,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="⚙️ Menu", callback_data="emiko_admin"),
                     InlineKeyboardButton(text="About 🖥️", callback_data="emiko_notes"),
                  ],[
-                    InlineKeyboardButton(text="🔨 Support", callback_data="emiko_admin"),
+                    InlineKeyboardButton(text="🔨 Support", callback_data="emiko_fuck"),
                     InlineKeyboardButton(text="Lock 🔒", callback_data="emiko_back"),
                  ],
                  [
@@ -420,12 +420,12 @@ def emiko_about_callback(update, context):
     elif query.data == "emiko_notes":
         query.message.edit_text(
             text=f"<b>About Group Securer 🖥️</b>\n"
-            "\n\n❏ Created : February 21, 2022\n\n❏ Bot Version : <code>1.5v<code/>\n\n❏ Library Version : <code>13.11</code>\n\n❏ Pyrogram Version : <code>1.4.8</code>\n\n👑 Creator\n└@Pavan_Magar\n\n👮🏻‍♂️ Admins\n├@iSmartAnkit\n└@OP_Aayu\n\n<b>This bot managed by @codexun.</b>",
+            "\n\n❏ Created : February 21, 2022\n\n❏ Bot Version : <code>1.5v</code>\n\n❏ Library Version : <code>13.11</code>\n\n❏ Pyrogram Version : <code>1.4.8</code>\n\n👑 Creator\n└@Pavan_Magar\n\n👮🏻‍♂️ Admins\n├@iSmartAnkit\n└@OP_Aayu\n\n<b>This bot managed by @codexun.</b>",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[
                     InlineKeyboardButton(text="🔨 Support", callback_data="emiko_fuck"),
-                    InlineKeyboardButton(text="Privacy 📋", callback_data="codexun_advanced"),
+                    InlineKeyboardButton(text="Privacy 📋", callback_data="source_"),
                  ],
                  [InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_")]]
             ),
