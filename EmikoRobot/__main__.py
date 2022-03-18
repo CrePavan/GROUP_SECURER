@@ -419,8 +419,8 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_notes":
         query.message.edit_text(
-            text=f"*Group Securer Bot About 🖥️*\n"
-            "\n\n❏ Created on : February 21, 2022\n\n❏Bot Version : `1.5v`\n\n❏Main Feature  : **Group Management**\n\n❏Library Version : `13.11`\n\nPyrogram Version : `1.4.8`\n\n👑 Creator\n└@Pavan_Magar [2090451552]\n\n👮🏻‍♂️ Admins\n└@Op_Aayu [5263240757]\n└@iSmartAnkit [2056407064]\n\n**This bot managed by team codexun.**",
+            text=f"<b>About Group Securer 🖥️</b>\n"
+            "\n\n❏ Created : February 21, 2022\n\n❏ Bot Version : <code>1.5v<code/>\n\n❏ Library Version : <code>13.11</code>\n\n❏ Pyrogram Version : <code>1.4.8</code>\n\n👑 Creator\n└@Pavan_Magar\n\n👮🏻‍♂️ Admins\n├@iSmartAnkit\n└@OP_Aayu\n\n<b>This bot managed by @codexun.</b>",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
@@ -429,14 +429,11 @@ def emiko_about_callback(update, context):
     elif query.data == "emiko_basic":
         query.message.edit_text(
             text=f"<b>❏ Basic Commands Menu 📖</b>"
-            f"\n\n**Available to Admins & Moderators**"
-            f"\n\n👮🏻 /connect connect your group chat with group securer bot.\n\n🕵🏻 /settings lets you manage all the Bot settings in a group.\n\n👮🏻  /ban lets you ban a user from the group without giving him the possibility to join again using the link of the group.\n\n👮🏻  /mute puts a user in read-only mode. He can read but he can't send any messages.\n\n👮🏻  /kick bans a user from the group, giving him the possibility to join again with the link of the group.\n\n👮🏻  /unban lets you remove a user from group's blacklist, giving them the possibility to join again with the link of the group.\n\n👮🏻  /info gives information about a user.\n\n**Get the information about to welcome massage for your group and set rules for group below.**",
+            f"\n\n<b>Available to Admins & Moderators</b>"
+            f"\n\n👮🏻 /connect connect your group chat with group securer bot.\n\n🕵🏻 /settings lets you manage all the Bot settings in a group.\n\n👮🏻  /ban lets you ban a user from the group without giving him the possibility to join again using the link of the group.\n\n👮🏻  /mute puts a user in read-only mode. He can read but he can't send any messages.\n\n👮🏻  /kick bans a user from the group, giving him the possibility to join again with the link of the group.\n\n👮🏻  /unban lets you remove a user from group's blacklist, giving them the possibility to join again with the link of the group.\n\n👮🏻  /info gives information about a user.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[
-                    InlineKeyboardButton(text="Set Welcome", callback_data="emiko_basic")],
-                 [  InlineKeyboardButton(text="Set Rules", callback_data="codexun_advanced")
-                 ],[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_")]]
+                [,[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_")]]
             ),
         )
     
@@ -450,8 +447,8 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Privacy 📋", callback_data="source_"),
-                    InlineKeyboardButton(text="About 🖥️", callback_data="emiko_notes"),
+                    InlineKeyboardButton(text="Support", callback_data="source_"),
+                    InlineKeyboardButton(text="Updates", callback_data="emiko_notes"),
                  ],
                  [
                     InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_"),
@@ -526,12 +523,12 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "Contact me in PM for help !",
+            "Contact me in PM for help!",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Click here 💡",
+                            text="Click me for help!",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ]
