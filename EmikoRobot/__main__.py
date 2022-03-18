@@ -365,7 +365,7 @@ def emiko_about_callback(update, context):
                 [
                  [
                     InlineKeyboardButton(text="⚙️ Menu", callback_data="emiko_admin"),
-                    InlineKeyboardButton(text="About 🖥️", callback_data="emiko_support"),
+                    InlineKeyboardButton(text="About 🖥️", callback_data="emiko_notes"),
                  ],[
                     InlineKeyboardButton(text="🔨 Support", callback_data="emiko_admin"),
                     InlineKeyboardButton(text="Lock 🔒", callback_data="emiko_back"),
@@ -419,10 +419,8 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_notes":
         query.message.edit_text(
-            text=f"<b>๏ Setting up notes</b>"
-            f"\nYou can save message/media/audio or anything as notes"
-            f"\nto get a note simply use # at the beginning of a word"
-            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
+            text=f"*Group Securer Bot About 🖥️*\n"
+            "\n\n❏ Created on : February 21, 2022\n\n❏Bot Version : `1.5v`\n\n❏Main Feature  : **Group Management**\n\n❏Library Version : `13.11`\n\nPyrogram Version : `1.4.8`\n\n👑 Creator\n└@Pavan_Magar [2090451552]\n\n👮🏻‍♂️ Admins\n└@Op_Aayu [5263240757]\n└@iSmartAnkit [2056407064]\n\n**This bot managed by team codexun.**",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
@@ -453,7 +451,7 @@ def emiko_about_callback(update, context):
                 [
                  [
                     InlineKeyboardButton(text="Privacy 📋", callback_data="source_"),
-                    InlineKeyboardButton(text="About 🖥️", callback_data="emiko_supportp"),
+                    InlineKeyboardButton(text="About 🖥️", callback_data="emiko_notes"),
                  ],
                  [
                     InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_"),
@@ -462,23 +460,6 @@ def emiko_about_callback(update, context):
             ),
         )
 
-   elif query.data == "emiko_support":
-        query.message.edit_text(
-            text=f"*Group Securer Bot About 🖥️*\n"
-            "\n\n❏ Created on : February 21, 2022\n\n❏Bot Version : `1.5v`\n\n❏Main Feature  : **Group Management**\n\n❏Library Version : `13.11`\n\nPyrogram Version : `1.4.8`\n\n👑 Creator\n└@Pavan_Magar [2090451552]\n\n👮🏻‍♂️ Admins\n└@Op_Aayu [5263240757]\n└@iSmartAnkit [2056407064]\n\n**This bot managed by team codexun.**",
-            parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="Privacy 📋", callback_data="source_"),
-                    InlineKeyboardButton(text="About 🖥️", callback_data="source_support"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_"),
-                 ]
-                ]
-            ),
-        )
 
 def Source_about_callback(update, context):
     query = update.callback_query
