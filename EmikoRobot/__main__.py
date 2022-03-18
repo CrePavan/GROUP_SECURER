@@ -435,7 +435,7 @@ def emiko_about_callback(update, context):
             f"\n\n👮🏻 /connect connect your group chat with group securer bot.\n\n👮🏻 /settings lets you manage all the Bot settings in a group.\n\n👮🏻  /ban lets you ban a user from the group without giving him the possibility to join again using the link of the group.\n\n👮🏻  /mute puts a user in read-only mode. He can read but he can't send any messages.\n\n👮🏻  /unmute unmute that user who is in read only mode or muted already.\n\n👮🏻  /kick bans a user from the group, giving him the possibility to join again with the link of the group.\n\n👮🏻  /unban lets you remove a user from group's blacklist, giving them the possibility to join again with the link of the group.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Set Rules 📝", callback_data="source_admin")],[InlineKeyboardButton(text="Set Welcome 🎄", callback_data="source_fuck")],[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
+                [[InlineKeyboardButton(text="Set Rules 📝", callback_data="source_admin")],[InlineKeyboardButton(text="Welcome 🎄", callback_data="source_fuck")],[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
             ),
         )
     
@@ -490,7 +490,7 @@ def Source_about_callback(update, context):
             f"\n\n👮🏻 /connect connect your group chat with group securer bot.\n\n👮🏻 /settings lets you manage all the Bot settings in a group.\n\n👮🏻  /ban lets you ban a user from the group without giving him the possibility to join again using the link of the group.\n\n👮🏻  /mute puts a user in read-only mode. He can read but he can't send any messages.\n\n👮🏻  /unmute unmute that user who is in read only mode or muted already.\n\n👮🏻  /kick bans a user from the group, giving him the possibility to join again with the link of the group.\n\n👮🏻  /unban lets you remove a user from group's blacklist, giving them the possibility to join again with the link of the group.\n\n👮🏻  /info gives information about a user.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
+                [[InlineKeyboardButton(text="Important Tools 📲", callback_data="emiko_admin")],[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
             ),
         )
     elif query.data == "source_notes":
@@ -515,9 +515,9 @@ def Source_about_callback(update, context):
         )
     elif query.data == "source_fuck":
         query.message.edit_text(
-            text=f"<b>❏ Advanced Commands Menu 📖</b>"
+            text=f"<b>❏ Set Welcome Massage 🎄</b>"
             f"\n\n<b>Available to Admins & Moderators</b>"
-            f"\n\n👮🏻 /connect connect your group chat with group securer bot.\n\n👮🏻 /settings lets you manage all the Bot settings in a group.\n\n👮🏻  /ban lets you ban a user from the group without giving him the possibility to join again using the link of the group.\n\n👮🏻  /mute puts a user in read-only mode. He can read but he can't send any messages.\n\n👮🏻  /unmute unmute that user who is in read only mode or muted already.\n\n👮🏻  /kick bans a user from the group, giving him the possibility to join again with the link of the group.\n\n👮🏻  /unban lets you remove a user from group's blacklist, giving them the possibility to join again with the link of the group.\n\n👮🏻  /info gives information about a user.",
+            f"\n\n<b>Admins only:</b>\n\n❏ /welcome <on/off>: enable/disable welcome messages.\n\n❏ /welcome: shows current welcome settings.\n\n❏ /welcome noformat: shows current welcome settings, without the formatting - useful to recycle your welcome messages!\n\n❏ /goodbye: same usage and args as /welcome.\n\n❏ /setwelcome <sometext>: set a custom welcome message. If used replying to media, uses that media.\n\n❏ /setgoodbye <sometext>: set a custom goodbye message. If used replying to media, uses that media.\n\n❏ /resetwelcome: reset to the default welcome message.\n\n❏ /resetgoodbye: reset to the default goodbye message.\n\n❏ /cleanwelcome <on/off>: On new member, try to delete the previous welcome message to avoid spamming the chat.\n\n❏ /welcomemutehelp: gives information about welcome mutes.\n\n❏ /cleanservice <on/off: deletes telegrams welcome/left service messages.\nExample:\nuser joined chat, user left chat.\nWelcome markdown:\n\n❏ /welcomehelp: view more formatting information for custom welcome/goodbye messages.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
