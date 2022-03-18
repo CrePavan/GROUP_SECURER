@@ -219,7 +219,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"👋 Hi, I'm {dispatcher.bot.first_name}. Nice to meet You.",
+            f"Hey there 👋 I'm {dispatcher.bot.first_name}. Nice to meet You !",
             parse_mode=ParseMode.HTML
        )
 
@@ -468,14 +468,14 @@ def Source_about_callback(update, context):
     if query.data == "source_":
         query.message.edit_text(
             text="*Privacy and Terms 📋*"
-            "\n\n✪ We always respect your privacy, we never log into bot's api and spying on you We use a encripted database Bot will automatically stops if someone logged in with api."
-            "\n\n✪ Some modules in this bot is owned by different authors so all credits goes to them."
-            "\n\n✪ We are not a responsible for any type of hazardous issue happened because of bot, because if man can do mistake so then it is a software it can also in some conditions."
-            "\n\n✪ The credit of this bot is going to team codexun so please always respect it."
-            "\n\n✪ If you have any type of problem or question about to group securer then kindly konws us at our support chat group."
-            "\n\n✪ All api's we used owned by originnal authors some api's we use free version please don't overuse AI Chat."
-            "\n\n✪ Stay connected with us always by joining our official update channel which is specially created for you all u guys."
-            "\n\n__Terms & Conditions will be changed with condition and time so please note it.__",
+            "\n\n❏ We always respect your privacy, we never log into bot's api and spying on you We use a encripted database Bot will automatically stops if someone logged in with api."
+            "\n\n❏ Some modules in this bot is owned by different authors so all credits goes to them."
+            "\n\n❏ We are not a responsible for any type of hazardous issue happened because of bot, because if man can do mistake so then it is a software it can also in some conditions."
+            "\n\n❏ The credit of this bot is going to team codexun so please always respect it."
+            "\n\n❏ If you have any type of problem or question about to group securer then kindly konws us at our support chat group."
+            "\n\n❏ All api's we used owned by originnal authors some api's we use free version please don't overuse AI Chat."
+            "\n\n❏ Stay connected with us always by joining our official update channel which is specially created for you all u guys."
+            "\n\n⚠️ __Terms & Conditions will be changed with condition and time at anytime__.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -517,7 +517,7 @@ def get_help(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Help",
+                                text="Click here 💡",
                                 url="t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
@@ -528,12 +528,12 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "Contact me in PM to get the list of possible commands.",
+            "Contact me in PM for help !",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Help",
+                            text="Click here 💡",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ]
@@ -626,7 +626,7 @@ def settings_button(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Go Back",
+                                text="⬅️ Back Home",
                                 callback_data="stngs_back({})".format(chat_id),
                             )
                         ]
@@ -701,7 +701,7 @@ def get_settings(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Settings",
+                                text="Settings ⚙️",
                                 url="t.me/{}?start=stngs_{}".format(
                                     context.bot.username, chat.id
                                 ),
@@ -774,8 +774,8 @@ def main():
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
             dispatcher.bot.sendMessage(
-                f"@{SUPPORT_CHAT}", 
-                "👋 Hi, i'm alive.",
+                f"@TeamCodexun", 
+                "Group Securer Started !",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
