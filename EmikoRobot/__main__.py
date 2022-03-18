@@ -89,7 +89,7 @@ I'm Powerfull Management Bot For Helping You to Manage Your Group.
 ✪ *User :*  `{}` *users*
 ✪ *Chat :*  `{}` *chats*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-✪ *Lets Unlock and Start Below* ✪
+✪ *Lets Unlock and Get Started* ✪
 """
 
 buttons = [
@@ -419,8 +419,8 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_notes":
         query.message.edit_text(
-            text=f"<b>About Group Securer 🖥️</b>\n"
-            "\n\n❏ Created : February 21, 2022\n\n❏ Bot Version : <code>1.5v</code>\n\n❏ Library Version : <code>13.11</code>\n\n❏ Pyrogram Version : <code>1.4.8</code>\n\n👑 Creator\n└@Pavan_Magar\n\n👮🏻‍♂️ Admins\n├@iSmartAnkit\n└@OP_Aayu\n\n<b>This bot managed by @codexun.</b>",
+            text=f"<b>About Group Securer Bot 🖥️</b>\n"
+            "\n\n❏ Created : <code>21.02.2022</code>\n\n❏ Bot Version : <code>1.5v</code>\n\n❏ Library Version : <code>13.11</code>\n\n❏ Telethon Version : <code>1.24.0</code>\n\n❏ Pyrogram Version : <code>1.4.8</code>\n\n👑 Creator\n└@Pavan_Magar\n\n👮🏻‍♂️ Admins\n├@iSmartAnkit\n└@Noob_Aayu\n\n<b>This bot is managed by Codexun.</b>",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[
@@ -446,13 +446,13 @@ def emiko_about_callback(update, context):
         query.message.edit_text(
             text=f"*Group Securer Support 👨🏻‍💻*\n"
             "\nGroup Securer is the bot built for to manage your super groups safely and easily and for protect your group from scammers and spammers."
-            "\n\nThis bot is developed by team codexun. Some modules in this bot is owned by different authors so all credit goes to them. If you have any type of querie then kindly contact us at our support group.\n\n*Here is the support and updates*",
+            "\n\n⚠️ We do NOT provide support for ban, mute or other things related to groups managed by this bot: for this kind of requests contact the group administrators directly.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", callback_data="source_"),
-                    InlineKeyboardButton(text="Updates", callback_data="emiko_notes"),
+                    InlineKeyboardButton(text="Support", url="https://t.me/TeamCodexun"),
+                    InlineKeyboardButton(text="Updates", url="https://t.me/codexun"),
                  ],
                  [
                     InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_"),
@@ -466,7 +466,7 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text="*Privacy and Terms 📋*"
+            text="*Privacy Policy and Terms 📋*"
             "\n\n❏ We always respect your privacy, we never log into bot's api and spying on you We use a encripted database Bot will automatically stops if someone logged in with api."
             "\n\n❏ Some modules in this bot is owned by different authors so all credits goes to them."
             "\n\n❏ We are not a responsible for any type of hazardous issue happened because of bot, because if man can do mistake so then it is a software it can also in some conditions."
