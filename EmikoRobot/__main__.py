@@ -357,7 +357,7 @@ def emiko_about_callback(update, context):
             "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
             "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
             "\n• I check for admins' permissions before executing any command and more stuffs"
-            "\n\n*_Get more information about below_*",
+            "\n\n_Get more information about below_",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -419,11 +419,11 @@ def emiko_about_callback(update, context):
     elif query.data == "emiko_notes":
         query.message.edit_text(
             text=f"<b>About Group Securer Bot  🖥️</b>\n"
-            "\n\n❏ Created on : <code>21.02.2022</code>\n\n❏ Bot Version : <code>1.5v</code>\n\n❏ Library Version : <code>13.11</code>\n\n❏ Telethon Version : <code>1.24.0</code>\n\n❏ Pyrogram Version : <code>1.4.8</code>\n\n👑 Creator\n└[Pavan Magar](t.me/pavan_magar)\n\n👮🏻‍♂️ Admins\n├[iSmart Ankit](t.me/iSmartAnkit)\n└[Kartik Gum.](t.me/op_aayu)\n\n<b>Powered by @TeamCodexun</b>",
+            "\n\n❏ Created on : <code>21.02.2022</code>\n\n❏ Bot Version : <code>1.5v</code>\n\n❏ Library Version : <code>13.11</code>\n\n❏ Telethon Version : <code>1.24.0</code>\n\n❏ Pyrogram Version : <code>1.4.8</code>\n\n👑 Creator\n└@Pavan_Magar\n\n👮🏻‍♂️ Admins\n├@iSmartAnkit\n└@Noob_Aayu\n\n<b>Powered by @TeamCodexun</b>",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[
-                    InlineKeyboardButton(text="Support 🔨", callback_data="emiko_fuck")],
+                    InlineKeyboardButton(text="Support ⚙️", callback_data="emiko_fuck")],
                     [InlineKeyboardButton(text="Privacy 📋", callback_data="source_")
                  ],
                  [InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_")]]
