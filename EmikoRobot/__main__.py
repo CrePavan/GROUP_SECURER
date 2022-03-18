@@ -357,8 +357,7 @@ def emiko_about_callback(update, context):
             "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
             "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
             "\n• I check for admins' permissions before executing any command and more stuffs"
-            "\n\n_Emiko's licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for EmikoRobot.",
+            "\n\n<b>_Get more information about below_</b>",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -405,7 +404,7 @@ def emiko_about_callback(update, context):
                 [
                  [
                     InlineKeyboardButton(text="💁🏻 Basic", callback_data="emiko_basic"),
-                    InlineKeyboardButton(text="Advanced 👮🏻‍♂️", callback_data="codexun_advanced"),
+                    InlineKeyboardButton(text="Advanced 👮🏻‍♂️", callback_data="source_basic"),
                  ],
                  [
                     InlineKeyboardButton(text="Expert Menu 🕵🏻", callback_data="help_back"),
@@ -434,10 +433,10 @@ def emiko_about_callback(update, context):
         query.message.edit_text(
             text=f"<b>❏ Basic Commands Menu 📖</b>"
             f"\n\n<b>Available to Admins & Moderators</b>"
-            f"\n\n👮🏻 /connect connect your group chat with group securer bot.\n\n🕵🏻 /settings lets you manage all the Bot settings in a group.\n\n👮🏻  /ban lets you ban a user from the group without giving him the possibility to join again using the link of the group.\n\n👮🏻  /mute puts a user in read-only mode. He can read but he can't send any messages.\n\n👮🏻  /kick bans a user from the group, giving him the possibility to join again with the link of the group.\n\n👮🏻  /unban lets you remove a user from group's blacklist, giving them the possibility to join again with the link of the group.\n\n👮🏻  /info gives information about a user.",
+            f"\n\n👮🏻 /connect connect your group chat with group securer bot.\n\n👮🏻 /settings lets you manage all the Bot settings in a group.\n\n👮🏻  /ban lets you ban a user from the group without giving him the possibility to join again using the link of the group.\n\n👮🏻  /mute puts a user in read-only mode. He can read but he can't send any messages.\n\n👮🏻  /unmute unmute that user who is in read only mode or muted already.\n\n👮🏻  /kick bans a user from the group, giving him the possibility to join again with the link of the group.\n\n👮🏻  /unban lets you remove a user from group's blacklist, giving them the possibility to join again with the link of the group.\n\n👮🏻  /info gives information about a user.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_")]]
+                [[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
             ),
         )
     
@@ -483,6 +482,16 @@ def Source_about_callback(update, context):
                     InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_")
                  ]
                 ]
+            ),
+        )
+    elif query.data == "source_basic":
+        query.message.edit_text(
+            text=f"<b>❏ Basic Commands Menu 📖</b>"
+            f"\n\n<b>Available to Admins & Moderators</b>"
+            f"\n\n👮🏻 /connect connect your group chat with group securer bot.\n\n👮🏻 /settings lets you manage all the Bot settings in a group.\n\n👮🏻  /ban lets you ban a user from the group without giving him the possibility to join again using the link of the group.\n\n👮🏻  /mute puts a user in read-only mode. He can read but he can't send any messages.\n\n👮🏻  /unmute unmute that user who is in read only mode or muted already.\n\n👮🏻  /kick bans a user from the group, giving him the possibility to join again with the link of the group.\n\n👮🏻  /unban lets you remove a user from group's blacklist, giving them the possibility to join again with the link of the group.\n\n👮🏻  /info gives information about a user.",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
             ),
         )
     elif query.data == "source_back":
