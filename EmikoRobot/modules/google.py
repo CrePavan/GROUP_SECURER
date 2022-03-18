@@ -276,7 +276,7 @@ async def apk(e):
         await e.reply("Exception Occured:- " + str(err))
 
 
-__mod_name__ = "Search"
+__mod_name__ = "🔎 Search"
 
 __help__ = """
 ❂ /google <query>*:* Perform a google search
@@ -287,7 +287,7 @@ __help__ = """
 ❂ /github <username>*:* Get information about a GitHub user.
 ❂ /country <country name>*:* Gathering info about given country
 ❂ /imdb <Movie name>*:* Get full info about a movie with imdb.com
-❂ Emiko <query>*:* Emiko answers the query
+❂ Group Securer <query>*:* Group Securer answers the query
 
-  💡Ex: `Emiko where is Japan?`
+  💡Ex: `Group Securer where is Japan?`
 """
