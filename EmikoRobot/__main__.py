@@ -188,7 +188,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="Go Back", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="⬅️ Back", callback_data="help_back")]]
                     ),
                 )
 
@@ -368,13 +368,13 @@ def emiko_about_callback(update, context):
                  ],
                  [
                     InlineKeyboardButton(text="Privacy 📋", callback_data="source_"),
-                    InlineKeyboardButton(text="About 👩🏻‍💻", callback_data="emiko_fuck"),
+                    InlineKeyboardButton(text="About 👩🏻‍💻", callback_data="emiko_about"),
                  ],
                  [
                     InlineKeyboardButton(text="Add to Your Group", url="https://github.com/kennedy-ex/EmikoRobot"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back to Home 🏘️", callback_data="emiko_back"),
+                    InlineKeyboardButton(text="🏠 Back to Home 🏠", callback_data="emiko_back"),
                  ]
                 ]
             ),
@@ -465,7 +465,7 @@ def emiko_about_callback(update, context):
         )
 
 
-    elif query.data == "emiko_fuck":
+    elif query.data == "emiko_basic":
         query.message.edit_text(
             text=f"*About Group Securer 👨🏻‍💻*\n"
             "\n\nGroup Securer is the bot built for to manage your super groups safely and easily and for protect your group from scammers and spammers."
@@ -478,7 +478,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="Updates", url="https://t.me/Codexun"),
                  ],
                  [
-                    InlineKeyboardButton(text="Owned Admin 👨🏻‍💻", user_id="2090451552"),
+                    InlineKeyboardButton(text="Owned Admin 👩🏻‍💻", url="https://t.me/pavan_magar"),
                  ],
                  [
                     InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_"),
