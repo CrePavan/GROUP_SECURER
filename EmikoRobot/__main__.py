@@ -365,7 +365,7 @@ def emiko_about_callback(update, context):
                 [
                  [
                     InlineKeyboardButton(text="⚙️ Menu", callback_data="emiko_admin"),
-                    InlineKeyboardButton(text="About 🖥️", callback_data="emiko_fuck"),
+                    InlineKeyboardButton(text="About 🖥️", callback_data="emiko_zalima"),
                  ],[
                     InlineKeyboardButton(text="🔨 Support", callback_data="emiko_admin"),
                     InlineKeyboardButton(text="Lock 🔒", callback_data="emiko_back"),
@@ -430,15 +430,14 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_basic":
         query.message.edit_text(
-            text=f"<b>๏ Basic Commands List 📖</b>"
-            f"\n\n*Available to Admins & Moderators*"
-            f"\n\n👮🏻 /connect connect your group chat with group securer bot.\n\n🕵🏻 /settings lets you manage all the Bot settings in a group.\n\n👮🏻  /ban lets you ban a user from the group without giving him the possibility to join again using the link of the group.\n\n👮🏻  /mute puts a user in read-only mode. He can read but he can't send any messages.\n\n👮🏻  /kick bans a user from the group, giving him the possibility to join again with the link of the group.\n\n👮🏻  /unban lets you remove a user from group's blacklist, giving them the possibility to join again with the link of the group.\n\n👮🏻  /info gives information about a user.\n\n*Get the information about to welcome massage for your group and set rules for group below.*"
-            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
+            text=f"<b>❏ Basic Commands Menu 📖</b>"
+            f"\n\n**Available to Admins & Moderators**"
+            f"\n\n👮🏻 /connect connect your group chat with group securer bot.\n\n🕵🏻 /settings lets you manage all the Bot settings in a group.\n\n👮🏻  /ban lets you ban a user from the group without giving him the possibility to join again using the link of the group.\n\n👮🏻  /mute puts a user in read-only mode. He can read but he can't send any messages.\n\n👮🏻  /kick bans a user from the group, giving him the possibility to join again with the link of the group.\n\n👮🏻  /unban lets you remove a user from group's blacklist, giving them the possibility to join again with the link of the group.\n\n👮🏻  /info gives information about a user.\n\n**Get the information about to welcome massage for your group and set rules for group below.**",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[
                     InlineKeyboardButton(text="Set Welcome", callback_data="emiko_basic")],
-                 [  InlineKeyboardButton(text="Ser Rules", callback_data="codexun_advanced")
+                 [  InlineKeyboardButton(text="Set Rules", callback_data="codexun_advanced")
                  ],[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_")]]
             ),
         )
@@ -446,15 +445,34 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_fuck":
         query.message.edit_text(
-            text=f"*About Group Securer 👨🏻‍💻*\n"
-            "\n\nGroup Securer is the bot built for to manage your super groups safely and easily and for protect your group from scammers and spammers."
+            text=f"*Group Securer Support 👨🏻‍💻*\n"
+            "\nGroup Securer is the bot built for to manage your super groups safely and easily and for protect your group from scammers and spammers."
             "\n\nThis bot is developed by team codexun. Some modules in this bot is owned by different authors so all credit goes to them. If you have any type of querie then kindly contact us at our support group.\n\n*Here is the support and updates*",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
                     InlineKeyboardButton(text="Privacy 📋", callback_data="source_"),
-                    InlineKeyboardButton(text="Support", callback_data="source_support"),
+                    InlineKeyboardButton(text="About 🖥️", callback_data="emiko_zalima"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_"),
+                 ]
+                ]
+            ),
+        )
+
+   elif query.data == "emiko_zalima":
+        query.message.edit_text(
+            text=f"*Group Securer Bot About 🖥️*\n"
+            "\n\n❏ Created on : February 21, 2022\n\n❏Bot Version : `1.5v`\n\n❏Main Feature  : **Group Management**\n\n❏Library Version : `13.11`\n\nPyrogram Version : `1.4.8`\n\n👑 Creator\n└@Pavan_Magar [2090451552]\n\n👮🏻‍♂️ Admins\n└@Op_Aayu [5263240757]\n└@iSmartAnkit [2056407064]\n\n**This bot managed by team codexun.**"
+            "\n\nThis bot is developed by team codexun. Some modules in this bot is owned by different authors so all credit goes to them. If you have any type of querie then kindly contact us at our support group.\n\n*Here is the support and updates*",
+            parse_mode=ParseMode.MARKDOWN,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                    InlineKeyboardButton(text="Privacy 📋", callback_data="source_"),
+                    InlineKeyboardButton(text="About 🖥️", callback_data="source_support"),
                  ],
                  [
                     InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_"),
