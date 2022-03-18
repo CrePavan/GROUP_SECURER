@@ -1,4 +1,4 @@
-__mod_name__ = "🔘 Some Tools 🔘"
+__mod_name__ = "🎛️ Tools"
 
 __help__ = """
 *Sangmata Info bot*
