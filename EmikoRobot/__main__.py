@@ -493,7 +493,7 @@ def Source_about_callback(update, context):
                 [[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
             ),
         )
-    elif query.data == "source_basic":
+    elif query.data == "source_notes":
         query.message.edit_text(
             text=f"<b>❏ Advanced Commands Menu 📖</b>"
             f"\n\n<b>Available to Admins & Moderators</b>"
@@ -503,7 +503,17 @@ def Source_about_callback(update, context):
                 [[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
             ),
         )
-    elif query.data == "source_basic":
+    elif query.data == "source_admin":
+        query.message.edit_text(
+            text=f"<b>❏ Advanced Commands Menu 📖</b>"
+            f"\n\n<b>Available to Admins & Moderators</b>"
+            f"\n\n👮🏻 /connect connect your group chat with group securer bot.\n\n👮🏻 /settings lets you manage all the Bot settings in a group.\n\n👮🏻  /ban lets you ban a user from the group without giving him the possibility to join again using the link of the group.\n\n👮🏻  /mute puts a user in read-only mode. He can read but he can't send any messages.\n\n👮🏻  /unmute unmute that user who is in read only mode or muted already.\n\n👮🏻  /kick bans a user from the group, giving him the possibility to join again with the link of the group.\n\n👮🏻  /unban lets you remove a user from group's blacklist, giving them the possibility to join again with the link of the group.\n\n👮🏻  /info gives information about a user.",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
+            ),
+        )
+    elif query.data == "source_fuck":
         query.message.edit_text(
             text=f"<b>❏ Advanced Commands Menu 📖</b>"
             f"\n\n<b>Available to Admins & Moderators</b>"
