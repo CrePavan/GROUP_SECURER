@@ -519,12 +519,11 @@ def Source_about_callback(update, context):
         )
     elif query.data == "source_tools":
         query.message.edit_text(
-            text=f"<b>❏ Set Rules and Regulations 📝</b>"
-            f"\n\n<b>Available to Admins & Users also</b>"
-            f"\n\nEvery chat works with different rules. This module will be help you to set your groups rules and regulations.\n\n<b>User Command :</b>\n\n💁🏻  /rules : get the list of rules and regulations in the given chat group and read it in bots pm section.\n\n<b>Admin Commands :</b>\n\n👮🏻‍♂️  /setrules [text] : set the rules and regulations in the given chat group.\n\n👮🏻‍♂️  /clearrules : clear all setted rules and regulations in the given chat group.",
+            text=f"<b>Get more special tools here 📲</b>"
+            f"\n\n<b>Telegraph :</b>\n\n❏ /tgm by replying image and get the telegraph link of image\n\n<b>Users History :</b>\n\n❏ /sg reply the user massage and get the his all history from sangmata bot.\n\n<b>Zip-Unzip Files</b>\n\n❏ /zip reply with your file and get it in zip format means convert it into zip format\n\n❏ /unzip reply with zip file and get its unzipped file means convert it into unzip format.\n\n<b>Tagger :</b>\n\n❏ /tagall reply with your massage and tag all members of your group\n\n❏ @all reply with your massage and mention all members in the group.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_basic")]]
+                [[InlineKeyboardButton(text="⬅️ Back Home", callback_data="source_basic")]]
             ),
         )
     elif query.data == "source_fuck":
