@@ -137,7 +137,7 @@ def ban(update: Update, context: CallbackContext) -> str:
 
         # bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
         reply = (
-            f"{mention_html(member.user.id, html.escape(member.user.first_name))} [<code>{member.user.id}</code>] Banned."
+            f"#Banned 🚫\n\nUser : {mention_html(member.user.id, html.escape(member.user.first_name))}\nID : [<code>{member.user.id}</code>]\nEvent : Banned Successfully."
         )
         if reason:
             reply += f"\nReason: {html.escape(reason)}"
@@ -151,7 +151,7 @@ def ban(update: Update, context: CallbackContext) -> str:
                         InlineKeyboardButton(
                             text="🔄  Unban", callback_data=f"unbanb_unban={user_id}"
                         ),
-                        InlineKeyboardButton(text="🗑️  Delete", callback_data="unbanb_del"),
+                        InlineKeyboardButton(text="Delete 🗑️", callback_data="unbanb_del"),
                     ]
                 ]
             ),
@@ -257,7 +257,7 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
                         InlineKeyboardButton(
                             text="🔄  Unban", callback_data=f"unbanb_unban={user_id}"
                         ),
-                        InlineKeyboardButton(text="🗑️  Delete", callback_data="unbanb_del"),
+                        InlineKeyboardButton(text="Delete 🗑️", callback_data="unbanb_del"),
                     ]
                 ]
             ),
@@ -592,7 +592,7 @@ __help__ = """
 """
 
 
-__mod_name__ = "Bans/Mutes"
+__mod_name__ = "🚫 Bans"
 
 BAN_HANDLER = CommandHandler(["ban", "sban"], ban, run_async=True)
 TEMPBAN_HANDLER = CommandHandler(["tban"], temp_ban, run_async=True)
