@@ -491,8 +491,8 @@ def Source_about_callback(update, context):
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[
-                    InlineKeyboardButton(text="Tools 📲", callback_data="emiko_basic"),
-                    InlineKeyboardButton(text="Fun 🎮", callback_data="source_basic"),
+                    InlineKeyboardButton(text="Tools 📲", callback_data="source_tools"),
+                    InlineKeyboardButton(text="Fun 🎮", callback_data="source_notes"),
                  ],
                  [InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
             ),
@@ -508,6 +508,16 @@ def Source_about_callback(update, context):
             ),
         )
     elif query.data == "source_admin":
+        query.message.edit_text(
+            text=f"<b>❏ Set Rules and Regulations 📝</b>"
+            f"\n\n<b>Available to Admins & Users also</b>"
+            f"\n\nEvery chat works with different rules. This module will be help you to set your groups rules and regulations.\n\n<b>User Command :</b>\n\n💁🏻  /rules : get the list of rules and regulations in the given chat group and read it in bots pm section.\n\n<b>Admin Commands :</b>\n\n👮🏻‍♂️  /setrules [text] : set the rules and regulations in the given chat group.\n\n👮🏻‍♂️  /clearrules : clear all setted rules and regulations in the given chat group.",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_basic")]]
+            ),
+        )
+    elif query.data == "source_tools":
         query.message.edit_text(
             text=f"<b>❏ Set Rules and Regulations 📝</b>"
             f"\n\n<b>Available to Admins & Users also</b>"
