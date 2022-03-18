@@ -419,7 +419,7 @@ def emiko_about_callback(update, context):
     elif query.data == "emiko_notes":
         query.message.edit_text(
             text=f"<b>About Group Securer Bot  🖥️</b>\n"
-            "\n\n❏ Created on : <code>21.02.2022</code>\n\n❏ Bot Version : <code>1.5v</code>\n\n❏ Library Version : <code>13.11</code>\n\n❏ Telethon Version : <code>1.24.0</code>\n\n❏ Pyrogram Version : <code>1.4.8</code>\n\n👑 Creator\n└@Pavan_Magar\n\n👮🏻‍♂️ Admins\n├@iSmartAnkit\n├@Noob_Aayu\n└@TeamCodexun\n\n<b>Read the given privacy policy.</b>",
+            "\n\n❏ Created on : <code>21.02.2022</code>\n\n❏ Bot Version : <code>1.5v</code>\n\n❏ Library Version : <code>13.11</code>\n\n❏ Telethon Version : <code>1.24.0</code>\n\n❏ Pyrogram Version : <code>1.4.8</code>\n\n👑 Creator\n└@Pavan_Magar\n\n👮🏻‍♂️ Admins\n├@iSmartAnkit\n├@Noob_Aayu\n└@TeamCodexun\n\n<b>Read the privacy policy given below.</b>",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -487,10 +487,10 @@ def Source_about_callback(update, context):
         query.message.edit_text(
             text=f"<b>❏ Advanced Commands Menu 📖</b>"
             f"\n\n<b>Available to Admins & Moderators</b>"
-            f"\n\n👮🏻 /connect connect your group chat with group securer bot.\n\n👮🏻 /settings lets you manage all the Bot settings in a group.\n\n👮🏻  /ban lets you ban a user from the group without giving him the possibility to join again using the link of the group.\n\n👮🏻  /mute puts a user in read-only mode. He can read but he can't send any messages.\n\n👮🏻  /unmute unmute that user who is in read only mode or muted already.\n\n👮🏻  /kick bans a user from the group, giving him the possibility to join again with the link of the group.\n\n👮🏻  /unban lets you remove a user from group's blacklist, giving them the possibility to join again with the link of the group.\n\n👮🏻  /info gives information about a user.",
+            f"\n\n👮🏻 /filters  see all available filters in the given chat group\n\n👮🏻‍♂️  /filter set the new filter by replying some msg or by typing text\n\n👮🏻‍♂️  /stop filter name and stop the available filter in the given chat group\n\n👮🏻‍♂️  /notes see all available notes in the given chat group.\n\n👮🏻‍♂️  /save and name of note and create new note in your group.\n\n👮🏻‍♂️  /remove and note name and remove your available notes from group.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Important Tools 📲", callback_data="emiko_admin")],[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
+                [[InlineKeyboardButton(text="Tools 📲", callback_data="emiko_admin"),(InlineKeyboardButton(text="Fun 🎮", callback_data="emiko_admin")],[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
             ),
         )
     elif query.data == "source_notes":
