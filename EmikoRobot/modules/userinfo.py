@@ -256,11 +256,11 @@ def info(update: Update, context: CallbackContext):
     text = (
         f"╔═━「<b> Information:</b> 」\n"
         f"❏ ID: <code>{user.id}</code>\n"
-        f"❏ First Name: {html.escape(user.first_name)}"
+        f"❏ Name: {html.escape(user.first_name)}"
     )
 
     if user.last_name:
-        text += f"\n❏ Last Name: {html.escape(user.last_name)}"
+        text += f"\n❏ Name: {html.escape(user.last_name)}"
 
     if user.username:
         text += f"\n❏ Username: @{html.escape(user.username)}"
