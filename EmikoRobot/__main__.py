@@ -423,7 +423,11 @@ def emiko_about_callback(update, context):
             "\n\n❏ Created : February 21, 2022\n\n❏ Bot Version : <code>1.5v<code/>\n\n❏ Library Version : <code>13.11</code>\n\n❏ Pyrogram Version : <code>1.4.8</code>\n\n👑 Creator\n└@Pavan_Magar\n\n👮🏻‍♂️ Admins\n├@iSmartAnkit\n└@OP_Aayu\n\n<b>This bot managed by @codexun.</b>",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
+                [[
+                    InlineKeyboardButton(text="🔨 Support", callback_data="emiko_fuck"),
+                    InlineKeyboardButton(text="Privacy 📋", callback_data="codexun_advanced"),
+                 ],
+                 [InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_")]]
             ),
         )
     elif query.data == "emiko_basic":
@@ -433,7 +437,7 @@ def emiko_about_callback(update, context):
             f"\n\n👮🏻 /connect connect your group chat with group securer bot.\n\n🕵🏻 /settings lets you manage all the Bot settings in a group.\n\n👮🏻  /ban lets you ban a user from the group without giving him the possibility to join again using the link of the group.\n\n👮🏻  /mute puts a user in read-only mode. He can read but he can't send any messages.\n\n👮🏻  /kick bans a user from the group, giving him the possibility to join again with the link of the group.\n\n👮🏻  /unban lets you remove a user from group's blacklist, giving them the possibility to join again with the link of the group.\n\n👮🏻  /info gives information about a user.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [,[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_")]]
+                [[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_")]]
             ),
         )
     
