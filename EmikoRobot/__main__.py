@@ -89,12 +89,12 @@ I'm Powerfull Management Bot For Helping You to Manage Your Group.
 ✪ *User :*  `{}` *users*
 ✪ *Chat :*  `{}` *chats*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-✪ *Lets get started task below* ✪
+✪ *Lets Unlock and Start Below* ✪
 """
 
 buttons = [
     [
-        InlineKeyboardButton(text="Lets Get to Start", callback_data="emiko_"),
+        InlineKeyboardButton(text="Unlock 🔓", callback_data="emiko_"),
     ],
 ]
 
@@ -350,7 +350,7 @@ def emiko_about_callback(update, context):
     query = update.callback_query
     if query.data == "emiko_":
         query.message.edit_text(
-            text="๏ I'm *Group Securer*, a powerful group management bot built to help you manage your group easily."
+            text="Hey there 👋 I'm *Group Securer*, a powerful group management bot built to help you manage your group easily."
             "\n• I can restrict users."
             "\n• I can greet users with customizable welcome messages and even set a group's rules."
             "\n• I have an advanced anti-flood system."
@@ -364,14 +364,14 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Commands ⚙️", callback_data="emiko_admin"),
-                    InlineKeyboardButton(text="About 👨🏻‍💻", callback_data="emiko_fuck"),
+                    InlineKeyboardButton(text="⚙️ Menu", callback_data="emiko_admin"),
+                    InlineKeyboardButton(text="About 🖥️", callback_data="emiko_fuck"),
+                 ],[
+                    InlineKeyboardButton(text="🔨 Support", callback_data="emiko_admin"),
+                    InlineKeyboardButton(text="Lock 🔒", callback_data="emiko_back"),
                  ],
                  [
                     InlineKeyboardButton(text="Add to Your Group", url="https://github.com/kennedy-ex/EmikoRobot"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="🏠 Back to Home 🏠", callback_data="emiko_back"),
                  ]
                 ]
             ),
