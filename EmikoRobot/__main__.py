@@ -435,7 +435,7 @@ def emiko_about_callback(update, context):
             f"\n\n👮🏻 /connect connect your group chat with group securer bot.\n\n👮🏻 /settings lets you manage all the Bot settings in a group.\n\n👮🏻  /ban lets you ban a user from the group without giving him the possibility to join again using the link of the group.\n\n👮🏻  /mute puts a user in read-only mode. He can read but he can't send any messages.\n\n👮🏻  /unmute unmute that user who is in read only mode or muted already.\n\n👮🏻  /kick bans a user from the group, giving him the possibility to join again with the link of the group.\n\n👮🏻  /unban lets you remove a user from group's blacklist, giving them the possibility to join again with the link of the group.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
+                [[InlineKeyboardButton(text="Set Rules 📝", callback_data="source_admin")],[InlineKeyboardButton(text="Set Welcome 🎄", callback_data="source_fuck")],[InlineKeyboardButton(text="⬅️ Back Home", callback_data="emiko_admin")]]
             ),
         )
     
