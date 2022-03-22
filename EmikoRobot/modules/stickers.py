@@ -429,7 +429,7 @@ def makepack_internal(
             extra_version = " " + str(packnum)
         if png_sticker:
             sticker_pack_name = (
-                f"{name}'s stic-pack (@{context.bot.username})" + extra_version
+                f"@TgStikr || {name}" + extra_version
             )
             success = context.bot.create_new_sticker_set(
                 user.id,
@@ -440,7 +440,7 @@ def makepack_internal(
             )
         if tgs_sticker:
             sticker_pack_name = (
-                f"{name}'s ani-pack (@{context.bot.username})" + extra_version
+                f"@TgStikr || {name}" + extra_version
             )
             success = context.bot.create_new_sticker_set(
                 user.id,
