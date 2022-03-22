@@ -131,7 +131,7 @@ def kang(update, context):
                             InlineKeyboardButton(
                                 text="View Pack", url=f"t.me/addstickers/{packname}"
                             )
-                        ]
+                        ],  [InlineKeyboardButton(text="Join for more!", url=f"t.me/tgstikr")]
                     ]
                 )
                 msg.reply_text(
@@ -173,7 +173,7 @@ def kang(update, context):
                                 InlineKeyboardButton(
                                     text="View Pack", url=f"t.me/addstickers/{packname}"
                                 )
-                            ]
+                            ],  [InlineKeyboardButton(text="Join for more!", url=f"t.me/tgstikr")]
                         ]
                     )
                     msg.reply_text(
@@ -193,7 +193,7 @@ def kang(update, context):
                                 InlineKeyboardButton(
                                     text="View Pack", url=f"t.me/addstickers/{packname}"
                                 )
-                            ]
+                            ],  [InlineKeyboardButton(text="Join for more!", url=f"t.me/tgstikr")]
                         ]
                     )
                     msg.reply_text(
@@ -239,7 +239,7 @@ def kang(update, context):
                             InlineKeyboardButton(
                                 text="View Pack", url=f"t.me/addstickers/{packname}"
                             )
-                        ]
+                        ],  [InlineKeyboardButton(text="Join for more!", url=f"t.me/tgstikr")]
                     ]
                 )
                 msg.reply_text(
@@ -270,7 +270,7 @@ def kang(update, context):
                                 InlineKeyboardButton(
                                     text="View Pack", url=f"t.me/addstickers/{packname}"
                                 )
-                            ]
+                            ],  [InlineKeyboardButton(text="Join for more!", url=f"t.me/tgstikr")]
                         ]
                     )
                     msg.reply_text(
@@ -323,7 +323,7 @@ def kang(update, context):
                         InlineKeyboardButton(
                             text="View Pack", url=f"t.me/addstickers/{packname}"
                         )
-                    ]
+                    ], [InlineKeyboardButton(text="Join for more!", url=f"t.me/tgstikr")]
                 ]
             )
             msg.reply_text(
@@ -362,7 +362,7 @@ def kang(update, context):
                             InlineKeyboardButton(
                                 text="View Pack", url=f"t.me/addstickers/{packname}"
                             )
-                        ]
+                        ], [InlineKeyboardButton(text="Join for more!", url=f"t.me/tgstikr")]
                     ]
                 )
                 msg.reply_text(
@@ -421,7 +421,7 @@ def makepack_internal(
     name = user.first_name
     name = name[:50]
     keyboard = InlineKeyboardMarkup(
-        [[InlineKeyboardButton(text="View Pack", url=f"{packname}")]]
+        [[InlineKeyboardButton(text="View Pack", url=f"{packname}")], [InlineKeyboardButton(text="Join for more!", url=f"t.me/tgstikr")]]
     )
     try:
         extra_version = ""
@@ -429,7 +429,7 @@ def makepack_internal(
             extra_version = " " + str(packnum)
         if png_sticker:
             sticker_pack_name = (
-                f"@TgStikr || {name}" + extra_version
+                f"Stickers From @TgStikr" + extra_version
             )
             success = context.bot.create_new_sticker_set(
                 user.id,
@@ -440,7 +440,7 @@ def makepack_internal(
             )
         if tgs_sticker:
             sticker_pack_name = (
-                f"@TgStikr || {name}" + extra_version
+                f"Stickers From @TgStikr" + extra_version
             )
             success = context.bot.create_new_sticker_set(
                 user.id,
