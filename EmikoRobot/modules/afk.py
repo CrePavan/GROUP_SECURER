@@ -135,10 +135,10 @@ def check_afk(update, context, user_id, fst_name, userc_id):
         if int(userc_id) == int(user_id):
             return
         if not user.reason:
-            res = "*#User_Offline 🔕*\n\n{} is afk".format(fst_name)
+            res = "{} is afk".format(fst_name)
             update.effective_message.reply_text(res)
         else:
-            res = "*#User_Offline 🔕*\n\n{} is afk.\nReason: <code>{}</code>".format(
+            res = "{} is afk.\n\nReason: <code>{}</code>".format(
                 html.escape(fst_name), html.escape(user.reason)
             )
             update.effective_message.reply_text(res, parse_mode="html")
