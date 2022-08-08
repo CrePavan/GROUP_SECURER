@@ -5,6 +5,13 @@ import asyncio
 
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
+from telethon import events
+from telethon.errors import UserNotParticipantError
+from telethon.tl.functions.channels import GetParticipantRequest
+from telethon.tl.types import ChannelParticipantAdmin
+from telethon.tl.types import ChannelParticipantCreator
+
+from EmikoRobot import telethn as client
 
 from EmikoRobot import telethn as bot
 
