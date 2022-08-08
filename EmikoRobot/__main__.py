@@ -419,7 +419,7 @@ def emiko_about_callback(update, context):
     elif query.data == "emiko_notes":
         query.message.edit_text(
             text=f"<b>About Group Securer Bot  🖥️</b>\n"
-            "\n\n❏ Created on : <code>21.02.2022</code>\n\n❏ Bot Version : <code>1.5v</code>\n\n❏ Library Version : <code>13.11</code>\n\n❏ Telethon Version : <code>1.24.0</code>\n\n❏ Pyrogram Version : <code>1.4.8</code>\n\n👑 Creator\n└@Pavan_Magar\n\n👮🏻‍♂️ Admins\n├@iSmartAnkit\n├@Noob_Aayu\n└@TeamCodexun\n\n<b>Read the privacy policy given below.</b>",
+            "\n\n❏ Created on : <code>21.02.2022</code>\n\n❏ Bot Version : <code>1.5v</code>\n\n❏ Library Version : <code>13.11</code>\n\n❏ Telethon Version : <code>1.24.0</code>\n\n❏ Pyrogram Version : <code>1.4.8</code>\n\n👑 Creator\n└@PavanMagar\n\n👮🏻‍♂️ Admins\n├@Noob_Aayu\n└@InvizHer\n\n<b>Read the privacy policy given below.</b>",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
