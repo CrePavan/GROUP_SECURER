@@ -26,7 +26,6 @@ CurrencyConverter
 googletrans
 google-trans-new
 jikanpy
-speedtest-cli
 coffeehouse
 regex
 bleach
@@ -73,7 +72,6 @@ envparse
 better_profanity
 textblob 
 nudepy
-nekos.py
 motor
 gpytranslate
 fontTools
